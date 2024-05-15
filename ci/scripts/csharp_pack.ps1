@@ -28,5 +28,6 @@ if ($destination) {
     dotnet pack -c Release -o $destination
 }
 else {
-    dotnet pack -c Release
+    $versionSuffix = "prerelease-$((Get-Date).ToString('yyyymmdd-hhmmss'))"
+    dotnet pack -c Release --version-suffix $versionSuffix
 }
