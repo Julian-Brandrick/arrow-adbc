@@ -36,4 +36,4 @@ if ($versionSuffix) {
     $packArgs["-version-suffix"] = $versionSuffix
 }
 
-dotnet pack @packArgs
+dotnet pack --no-build @packArgs
